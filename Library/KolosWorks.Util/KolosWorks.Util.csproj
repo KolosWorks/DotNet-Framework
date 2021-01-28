@@ -38,18 +38,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <HintPath>bin\Debug\System.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web">
-      <HintPath>bin\Debug\System.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Extensions">
-      <HintPath>bin\Debug\System.Web.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Services">
-      <HintPath>bin\Debug\System.Web.Services.dll</HintPath>
-    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\jquery.min.js" />
