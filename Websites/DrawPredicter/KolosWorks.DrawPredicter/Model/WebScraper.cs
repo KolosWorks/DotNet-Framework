@@ -54,7 +54,7 @@ namespace KolosWorks.DrawPredicter.Model
             {
                 var hrefString = matchContainerNode.Descendants("a").First().GetAttributeValue("href", string.Empty);
                 var dateString = hrefString.Substring(16, 10);
-                var matchDate = DateTime.Parse(dateString);
+                var matchDate = DateTime.Parse(dateString, new System.Globalization.CultureInfo("en-GB"));
 
                 var dayDiff = Convert.ToByte((matchDate - ukDate).TotalDays);
                 if (dayDiff <= 14)
@@ -128,7 +128,7 @@ namespace KolosWorks.DrawPredicter.Model
             HtmlDocument htmlDocument = web.Load("https://www.timeanddate.com/worldclock/uk/london");
 
             string dateString = htmlDocument.DocumentNode.SelectNodes("//span[@id='ctdat']").First().InnerHtml;
-            var result = DateTime.Parse(dateString);
+            var result = DateTime.Parse(dateString, new System.Globalization.CultureInfo("en-GB"));
 
             return result;
         }
